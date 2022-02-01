@@ -1,10 +1,10 @@
 Q1 - What is a relational database?
-
-
+A database composed of a set of tables connected through primary and foreign keys.
 
 Q2 - What are the different 'table relationships?'
-
-
+1:1 one to one
+1:N one to many
+N:N many to many
 
 Q3 - Consider this e-library service. An author, defined by his name have several books. A book, defined by its title and publishing year, has one author only. What's this simple database scheme. Please draw it!
 
@@ -15,7 +15,7 @@ Q4 - A user, defined by his email, can read several books. A book (e-book!!) can
 - see db.lewagon.org example
 
 Q5 - What's the language to make queries to a database?
-
+SQL - Structured Query Language
 
 Q6 - What's the simple query to get books written before 1985?
 
@@ -26,33 +26,33 @@ Q7 - What's the simple query to get the 3 most recent books written by Jules Ver
 -- see books controller
 
 Q8 - What's the purpose of ActiveRecord?
-
-
+1. connects the columns in our DB to the attributes of the model (first_name column, .first_name / .first_name = "")
+2. Gives reusable CRUD methods to our models (.save, .destroy, .all, .find ...) so we don't need to write SQL
 
 Q9 - What's a migration?
+A ruby file in our 'db/migrate' folder which makes change to our DB schema
+It write the SQL for us.
 
+  - How do you run a migration?
+  rake db:migrate
 
-
-   - How do you run a migration?
-
-
-Q10 - Complete migrations to create your e-library database
+Q11 - Complete migrations to create your e-library database
 
 -- see migration files
 
-Q11 - Write a migration to add a category column to the books table.
+Q15 - Write a migration to add a category column to the books table.
 
 -- see migration file
 
-Q12 - Define an ActiveRecord model for each table of your DB. Add the ActiveRecord associations between models.
+Q16 - Define an ActiveRecord model for each table of your DB. Add the ActiveRecord associations between models.
 
 -- see models
 
-Q13 - Complete the following code using the relevant ActiveRecord methods.
+Q17 - Complete the following code using the relevant ActiveRecord methods.
 
 -- see active_record_methods.rb
 
-Q14 - Add validations of your choice to the Author class. Can we save an object in DB if its validations do not pass?
+Q14 - Add validations of your choice to the Author class. Can we save an object in DB if its validations do not pass? NO
 
 -- see author.rb
 
@@ -64,11 +64,3 @@ Database roadmap:
 3.) Code models
   -> Associations
   -> Validations
-
-
-
-
-
-
-
-
